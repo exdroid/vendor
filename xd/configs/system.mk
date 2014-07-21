@@ -29,6 +29,11 @@ PRODUCT_COPY_FILES += \
     vendor/xd/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/xd/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
 
+# Chromium prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
 # Show SELinux status in Settings --> About phone/tablet
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
