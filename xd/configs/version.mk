@@ -9,5 +9,5 @@ XD_VERSION_BUILD := B1
 
 # Export version
 VERSION := $(XD_VERSION_YEAR)$(XD_VERSION_MONTH)$(XD_VERSION_DAY)$(XD_VERSION_BUILD)
-export XD_VERSION := $(VERSION)
-export ZIP_NAME := $(XD_VERSION)-$(shell date -u +%Y%m%d)
+export XD_BUILD_NO := $(VERSION)
+export XD_VERSION := $(XD_BUILD_NO)-$(shell date -u +%Y%m%d)
