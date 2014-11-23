@@ -22,4 +22,9 @@ PRODUCT_COPY_FILES += \
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/$(VENDOR)/prebuilt/etc/init.d:system/etc/init.d
+    vendor/$(VENDOR)/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/xd/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/xd/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
