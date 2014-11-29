@@ -13,8 +13,11 @@ preserve_addon_d() {
   chmod 755 /tmp/addon.d/*.sh
 }
 
-# Restore /system/addon.d in /tmp/addon.d
+# Restore /tmp/addon.d in /system/addon.d
 restore_addon_d() {
+  if [ ! -d /"system"/"addon.d" ]; then
+    mkdir -p -m 755 /system/addon.d/
+  fi
   cp -a /tmp/addon.d/* /system/addon.d/
   rm -rf /tmp/addon.d/
 }
