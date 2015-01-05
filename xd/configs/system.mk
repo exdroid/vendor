@@ -28,3 +28,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/xd/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/xd/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
+
+# Show SELinux status in Settings --> About phone/tablet
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
