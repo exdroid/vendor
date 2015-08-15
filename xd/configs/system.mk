@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Thank you, please drive thru!
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
+
 # Copy custom ramdisk
 PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/etc/init.$(VENDOR).rc:root/init.$(VENDOR).rc
@@ -33,6 +36,10 @@ PRODUCT_COPY_FILES += \
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
+
+# Busybox
+PRODUCT_PACKAGES += \
+    Busybox
 
 # Show SELinux status in Settings --> About phone/tablet
 PRODUCT_PROPERTY_OVERRIDES += \
