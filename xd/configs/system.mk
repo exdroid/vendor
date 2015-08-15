@@ -29,8 +29,10 @@ PRODUCT_COPY_FILES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/xd/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/xd/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
+    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/$(VENDOR)/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
+
+PRODUCT_PACKAGE_OVERLAYS += vendor/$(VENDOR)/overlay
 
 # Chromium prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)

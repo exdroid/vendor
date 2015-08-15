@@ -19,10 +19,7 @@ ifeq (xd_mako,$(TARGET_PRODUCT))
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := xd_xhdpi
 
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
-
-# Include ParanoidAndroid common configuration
+# Include common configuration
 include vendor/xd/main.mk
 
 # Inherit AOSP device configuration
